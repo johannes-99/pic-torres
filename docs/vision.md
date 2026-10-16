@@ -18,7 +18,6 @@ pic-torres is a private, self-hosted image gallery for a family. Family members 
 ## Out of scope for v1 (backlog drafts)
 - Deleting images (REQ-101)
 - Albums (REQ-102)
-- Sharing and fine-grained roles (REQ-103)
 - EXIF details, filtering and search (REQ-104)
 - Video, mobile apps, public sharing links, face recognition
 

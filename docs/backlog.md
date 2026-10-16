@@ -36,7 +36,6 @@ The ordered milestones that drive implementation. Work starts only on requiremen
 ## Later (drafts, not scheduled)
 - REQ-101: delete images
 - REQ-102: albums
-- REQ-103: sharing and roles
 - REQ-104: EXIF details, filtering and search
 
 ## Build loop per item (see NFR-007 AC-7 and AC-8)
