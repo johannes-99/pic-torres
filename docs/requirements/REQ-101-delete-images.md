@@ -2,7 +2,7 @@
 id: REQ-101
 title: Delete images
 type: functional
-status: approved
+status: draft
 priority: should
 milestone: backlog
 ---

@@ -2,7 +2,7 @@
 id: REQ-104
 title: EXIF details, filtering and search
 type: functional
-status: approved
+status: draft
 priority: could
 milestone: backlog
 ---
