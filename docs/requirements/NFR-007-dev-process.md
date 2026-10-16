@@ -33,7 +33,7 @@ The app is built largely by AI agents (Claude Code). The process and its guard r
 
 ### Claude Code configuration
 - **AC-4** `.claude/settings.json` sets these permissions:
-  - Allow `./mvnw`, `npm`, `npx`, `docker compose`, `git`, and `gh pr`.
+  - Allow `./mvnw`, `npm`, `npx`, `podman` / `docker` (including compose), `git`, and `gh pr`.
   - Deny force pushes, pushes to `main`, recursive deletes outside the repository, and reading `.env*` or `deploy/secrets/**`.
 - **AC-5** Hooks:
   - **PostToolUse** (Edit/Write) runs the formatter.

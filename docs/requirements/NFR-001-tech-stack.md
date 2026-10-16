@@ -36,6 +36,11 @@ A fixed, mainstream stack with a fast developer loop and strong test support. Se
   - `scripts/`
   - `.github/`
   - `CLAUDE.md`
+- **AC-9** Given a development machine with either rootless Podman or Docker, then Dev Services and all tests run without code changes. The README documents the Podman setup:
+  - install `podman-docker`
+  - `systemctl --user enable --now podman.socket`
+  - `export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/podman/podman.sock`
+  - `export TESTCONTAINERS_RYUK_DISABLED=true`
 
 ## Notes
 - The application runs in JVM mode only; there is no native image (see NFR-003).

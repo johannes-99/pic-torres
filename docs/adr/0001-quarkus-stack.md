@@ -21,6 +21,6 @@ We need a Java backend and an Angular frontend for a small, self-hosted family g
   - Real dependencies in tests, with no mocks for the database or IdP.
   - One deployable artifact.
 - **Negative:**
-  - Docker is required for development and CI.
+  - A container runtime with a Docker-compatible API (Podman with `podman.socket`, or Docker) is required for development and CI.
   - Quinoa couples the frontend build to Maven. Frontend developers can still run `npm` directly in `src/main/webui`.
 - **Considered alternatives:** Spring Boot (more boilerplate for the same result here), and a separate frontend container (needs CORS or a proxy, and complicates the cookie-based auth).

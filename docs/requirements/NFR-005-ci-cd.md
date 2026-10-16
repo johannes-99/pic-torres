@@ -13,7 +13,7 @@ The pipeline is the hard quality gate. Nothing reaches `main` without green chec
 ## Acceptance criteria
 - **AC-1** `.github/workflows/ci.yml` runs on every pull request and every push to `main`. It runs `./mvnw verify` and the trace check.
 - **AC-2** `.github/workflows/e2e.yml` runs on pull requests to `main`:
-  - It builds the container image, starts the stack with Docker Compose, and runs Playwright.
+  - It builds the container image, starts the stack with Compose (using the Docker preinstalled on the GitHub runner), and runs Playwright.
   - It uploads the HTML report and traces as artifacts.
 - **AC-3** `.github/workflows/release.yml` runs on tags `v*`:
   - It builds the image with Jib and pushes it to GitHub Container Registry (GHCR).

@@ -3,7 +3,7 @@
 The ordered milestones that drive implementation. Work starts only on requirements with `status: approved`. The process and Definition of Done are defined in NFR-007.
 
 ## Prerequisites (done by a human, once)
-- [ ] Install Node LTS (e.g. via nvm), Docker Engine with Compose (user in the `docker` group), and the GitHub CLI `gh`.
+- [ ] Install Node LTS (e.g. via nvm), a container runtime (Podman with `podman-docker`, `podman.socket` enabled and `DOCKER_HOST` set; or Docker Engine), and the GitHub CLI `gh`.
 - [ ] Run `gh auth login`, then create an empty **private** GitHub repository `pic-torres` and add it as `origin`.
 - [ ] Review all requirements and ADRs, and set the accepted ones to `approved` / `accepted`.
 
