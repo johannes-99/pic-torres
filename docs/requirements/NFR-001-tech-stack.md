@@ -2,7 +2,7 @@
 id: NFR-001
 title: Technology stack and repository layout
 type: non-functional
-status: draft
+status: approved
 priority: must
 milestone: M0
 ---

@@ -2,7 +2,7 @@
 id: NFR-006
 title: Self-hosted deployment
 type: non-functional
-status: draft
+status: approved
 priority: must
 milestone: M4
 ---

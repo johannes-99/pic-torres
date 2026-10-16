@@ -2,7 +2,7 @@
 id: NFR-002
 title: Authentication with OIDC (Keycloak, web-app flow)
 type: non-functional
-status: draft
+status: approved
 priority: must
 milestone: M0
 ---

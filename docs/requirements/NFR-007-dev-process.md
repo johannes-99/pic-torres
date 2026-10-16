@@ -2,7 +2,7 @@
 id: NFR-007
 title: Development process, AI agents and guard rails
 type: non-functional
-status: draft
+status: approved
 priority: must
 milestone: M0
 ---

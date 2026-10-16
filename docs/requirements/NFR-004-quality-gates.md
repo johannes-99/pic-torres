@@ -2,7 +2,7 @@
 id: NFR-004
 title: Automated testing and quality gates
 type: non-functional
-status: draft
+status: approved
 priority: must
 milestone: M0
 ---

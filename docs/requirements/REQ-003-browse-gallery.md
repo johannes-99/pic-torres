@@ -2,7 +2,7 @@
 id: REQ-003
 title: Browse the gallery
 type: functional
-status: draft
+status: approved
 priority: must
 milestone: M3
 ---

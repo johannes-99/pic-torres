@@ -2,7 +2,7 @@
 id: NFR-003
 title: Image storage and processing
 type: non-functional
-status: draft
+status: approved
 priority: must
 milestone: M0
 ---

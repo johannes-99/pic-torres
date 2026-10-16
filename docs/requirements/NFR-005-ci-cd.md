@@ -2,7 +2,7 @@
 id: NFR-005
 title: Continuous integration and delivery (GitHub Actions)
 type: non-functional
-status: draft
+status: approved
 priority: must
 milestone: M0
 ---

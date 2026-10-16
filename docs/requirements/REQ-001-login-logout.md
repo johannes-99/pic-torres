@@ -2,7 +2,7 @@
 id: REQ-001
 title: Sign in and sign out
 type: functional
-status: draft
+status: approved
 priority: must
 milestone: M1
 ---

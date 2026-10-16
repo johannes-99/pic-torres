@@ -1,6 +1,6 @@
 # ADR-0001: Quarkus + Angular (via Quinoa) as the application stack
 
-- **Status:** proposed
+- **Status:** accepted
 - **Date:** 2026-10-16
 
 ## Context

@@ -2,7 +2,7 @@
 id: REQ-004
 title: View a single image
 type: functional
-status: draft
+status: approved
 priority: must
 milestone: M3
 ---

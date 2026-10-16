@@ -1,6 +1,6 @@
 # ADR-0002: OIDC web-app flow with session cookie (BFF) instead of SPA bearer tokens
 
-- **Status:** proposed
+- **Status:** accepted
 - **Date:** 2026-10-16
 
 ## Context

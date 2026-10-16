@@ -2,7 +2,7 @@
 id: REQ-002
 title: Upload images
 type: functional
-status: draft
+status: approved
 priority: must
 milestone: M2
 ---

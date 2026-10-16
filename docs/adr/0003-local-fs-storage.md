@@ -1,6 +1,6 @@
 # ADR-0003: Local filesystem for image files, PostgreSQL for metadata
 
-- **Status:** proposed
+- **Status:** accepted
 - **Date:** 2026-10-16
 
 ## Context

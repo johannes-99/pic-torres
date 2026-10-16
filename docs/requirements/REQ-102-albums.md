@@ -2,7 +2,7 @@
 id: REQ-102
 title: Albums
 type: functional
-status: draft
+status: approved
 priority: should
 milestone: backlog
 ---
