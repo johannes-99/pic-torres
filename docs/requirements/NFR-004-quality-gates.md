@@ -23,5 +23,9 @@ Every change is verified automatically, following the test pyramid: many fast un
   - Spotless format check
   - JaCoCo line coverage of at least 80 % for the backend
 - **AC-8** The frontend uses ESLint and Prettier, and a lint error fails the build.
-- **AC-9** `node scripts/trace.mjs` fails if an `approved` or `implemented` requirement has an acceptance criterion without a referencing test.
+- **AC-9** `node scripts/trace.mjs` fails when either of these is true:
+  - an `implemented` requirement has an acceptance criterion without a referencing test (criteria marked _(manual)_ excepted)
+  - a test references a requirement or criterion that does not exist
+
+  Gaps of `approved` requirements are only reported. Setting a requirement to `implemented` therefore requires full coverage.
 - **AC-10** Tests are deterministic: there are no real network calls outside the local test containers, and no sleeps used for synchronization.

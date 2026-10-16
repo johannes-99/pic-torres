@@ -36,4 +36,5 @@ Open questions, constraints, links to ADRs.
 ## Traceability
 - Tests reference the requirement and criterion they verify, e.g. `REQ-002/AC-3`. See NFR-007 for how each test framework expresses this.
 - `scripts/trace.mjs` generates `docs/traceability.md`.
-- CI fails if an `approved` or `implemented` requirement has an acceptance criterion without a test.
+- CI fails if an `implemented` requirement has an acceptance criterion without a test, or if a test references an unknown criterion. Gaps of `approved` requirements are reported in the matrix.
+- Criteria that can only be checked by a person (e.g. GitHub settings) end with `_(manual)_`. They are listed in the matrix as manual verification.

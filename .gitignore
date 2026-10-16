@@ -1,0 +1,10 @@
+# Secrets and local config
+.env
+.env.*
+!.env.example
+deploy/secrets/
+.claude/settings.local.json
+
+# Logs and OS files
+*.log
+.DS_Store

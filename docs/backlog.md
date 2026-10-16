@@ -3,11 +3,13 @@
 The ordered milestones that drive implementation. Work starts only on requirements with `status: approved`. The process and Definition of Done are defined in NFR-007.
 
 ## Prerequisites (done by a human, once)
-- [ ] Install Node LTS (e.g. via nvm), a container runtime (Podman with `podman-docker`, `podman.socket` enabled and `DOCKER_HOST` set; or Docker Engine), and the GitHub CLI `gh`.
-- [ ] Run `gh auth login`, then create an empty **private** GitHub repository `pic-torres` and add it as `origin`.
-- [ ] Review all requirements and ADRs, and set the accepted ones to `approved` / `accepted`.
+- [x] Install Node LTS (e.g. via nvm), a container runtime (Podman with `podman-docker`, `podman.socket` enabled and `DOCKER_HOST` set; or Docker Engine), and the GitHub CLI `gh`.
+- [x] Run `gh auth login`, then create an empty GitHub repository `pic-torres` (made public in M0) and add it as `origin`.
+- [x] Review all requirements and ADRs, and set the accepted ones to `approved` / `accepted`.
 
-## M0: Foundation
+## M0: Foundation ✅
+The repository is public, because branch protection, auto-merge and CodeQL are not free for private repositories. Criteria of the M0 NFRs that depend on features (e.g. login redirects for API calls, the production stack) are covered in M1–M4; see `docs/traceability.md`.
+
 | Item | Requirements |
 |---|---|
 | Guard rails: `CLAUDE.md` (Definition of Done), `.claude/settings.json` (permissions, hooks), `.claude/agents/*` | NFR-007 |
