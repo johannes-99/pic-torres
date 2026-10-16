@@ -1,0 +1,49 @@
+# NFR-005 AC-3: on a version tag, build the container image with Jib, push it to GHCR and
+# create a GitHub release with generated notes.
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  release:
+    name: release
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+          cache-dependency-path: backend/src/main/webui/package-lock.json
+
+      - name: Build and push image
+        working-directory: backend
+        env:
+          VERSION: ${{ github.ref_name }}
+        run: >
+          ./mvnw -B -ntp verify
+          -Dquarkus.container-image.build=true
+          -Dquarkus.container-image.push=true
+          -Dquarkus.container-image.tag="${VERSION#v}"
+          -Dquarkus.container-image.additional-tags=latest
+          -Dquarkus.container-image.username=${{ github.actor }}
+          -Dquarkus.container-image.password=${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "${{ github.ref_name }}" --generate-notes --verify-tag

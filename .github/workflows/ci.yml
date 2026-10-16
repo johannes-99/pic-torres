@@ -1,0 +1,55 @@
+# NFR-005 AC-1: build, all tests and the trace check on every PR and push to main.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    name: ci
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+          cache-dependency-path: backend/src/main/webui/package-lock.json
+
+      - name: Trace check (NFR-004 AC-9)
+        run: |
+          node --test scripts/*.test.mjs
+          node scripts/trace.mjs
+          git diff --exit-code docs/traceability.md || {
+            echo "::error::docs/traceability.md is outdated; run 'node scripts/trace.mjs' and commit the result."
+            exit 1
+          }
+
+      - name: Build and test (NFR-004 AC-7)
+        working-directory: backend
+        run: ./mvnw -B -ntp verify
+
+      - name: Coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jacoco-report
+          path: backend/target/site/jacoco/
+          if-no-files-found: ignore

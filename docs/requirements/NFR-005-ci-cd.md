@@ -20,6 +20,6 @@ The pipeline is the hard quality gate. Nothing reaches `main` without green chec
   - It creates a GitHub Release with generated notes.
 - **AC-4** CodeQL analysis runs for Java and TypeScript, on pull requests and weekly.
 - **AC-5** Dependabot is configured for Maven, npm and GitHub Actions.
-- **AC-6** Branch protection on `main` requires pull requests and the passing checks `ci`, `e2e` and `codeql`. Direct pushes and force pushes are not allowed.
+- **AC-6** Branch protection on `main` requires pull requests and the passing checks `ci`, `e2e` and `codeql`. Direct pushes and force pushes are not allowed. _(manual)_
 - **AC-7** Commit messages follow Conventional Commits.
 - **AC-8** The repository includes a pull request template (with a checklist for the Definition of Done) and issue templates for requirements and bugs.
