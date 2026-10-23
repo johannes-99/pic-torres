@@ -17,7 +17,7 @@
         <skipITs>false</skipITs>
         <surefire-plugin.version>3.5.6</surefire-plugin.version>
 
-        <quinoa.version>2.9.2</quinoa.version>
+        <quinoa.version>2.9.3</quinoa.version>
         <thumbnailator.version>0.4.21</thumbnailator.version>
         <metadata-extractor.version>2.21.0</metadata-extractor.version>
         <twelvemonkeys.version>3.15.3</twelvemonkeys.version>
