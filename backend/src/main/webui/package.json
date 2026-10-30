@@ -35,7 +35,7 @@
     "@angular/cli": "^22.2.3",
     "@angular/compiler-cli": "^22.2.0",
     "@eslint/js": "^10.0.1",
-    "@openapitools/openapi-generator-cli": "^2.41.0",
+    "@openapitools/openapi-generator-cli": "^2.42.0",
     "@testing-library/angular": "^19.5.0",
     "@testing-library/dom": "^10.4.2",
     "angular-eslint": "22.6.0",
